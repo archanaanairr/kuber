@@ -1,0 +1,15 @@
+server:
+  port: 9980
+spring:
+  application:
+    name: mysqldoc
+  datasource:
+    url: jdbc:mysql://localhost:3306/kuber
+    username: root
+    password: pass@word1
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
