@@ -2,14 +2,14 @@ version: '3.8'
 
 services:
   app:
-    image: archananair16/kubernet
+    image: archananair16/flightsdocker1
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "9980:9980"
+      - "2008:2008"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/kuber
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/springboot
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root
     depends_on:
@@ -18,7 +18,7 @@ services:
   db:
     image: mysql:8.0
     environment:
-      MYSQL_DATABASE: kuber
+      MYSQL_DATABASE: springboot
       MYSQL_ROOT_PASSWORD: root
     ports:
       - "3307:3306"
